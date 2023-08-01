@@ -7,19 +7,129 @@
     <title>Document</title>
 </head>
 <body>
+
+
+
+  <div class="wrapper max-w-2xl mx-auto pl-3">
+    <h3 class="text-center text-lg font-semibold text-gray-900 dark:text-white py-3 border-b border-gray-200 dark:border-gray-700"">
+      LeetCode's problems solving TimeLine
+    </h3>
+    <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
+  <li class="mb-10 ml-4">
+      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">12.07.2023</time>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Minimum Depth of Binary Tree</h3>
+      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        Пошук мінімальної глибини бінарного дерева. 
+        Обхід по дереву можливий за алгоритмами DFS (Depth-first search) та BFS (Breadth-first search).
+      </p>
+      <p id="12.07.2023" style="display: none;" class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        Мінімальна глибина бінарного дерева це відстань від кореня до найближчого листка (це вузел без нащадків). 
+        <br/>
+        У цій проблемі, з огляду на швідкість пошуку рішення, краще використати BFS.
+      </p>
+      <button 
+        tittle="Show more" 
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        onclick="if(document.getElementById('12.07.2023').style.display=='none') {document.getElementById('12.07.2023').style.display=''}else{document.getElementById('12.07.2023').style.display='none'}"
+      >Show/hide</button>
+  </li>
+  <li class="mb-10 ml-4">
+      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">13.07.2023</time>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Check if Object Instance of Class</h3>
+      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        Напишіть функцію, яка перевіряє, чи дане значення є екземпляром даного класу або суперкласу. 
+        Для цієї проблеми об’єкт вважається екземпляром даного класу, якщо цей об’єкт має доступ до
+        методів цього класу.
+      </p>
+      <p id="13.07.2023" style="display: none;" class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        Цікава проблема, вбудованого instanceof недостатньо. В алгоритмі перевірки використовується 
+        конструктор об'єкту. 
+      </p>
+      <button 
+        tittle="Show more" 
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        onclick="if(document.getElementById('13.07.2023').style.display=='none') {document.getElementById('13.07.2023').style.display=''}else{document.getElementById('13.07.2023').style.display='none'}"
+      >Show/hide</button>
+  <li class="mb-10 ml-4">
+      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">14.07.2023</time>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Longest Arithmetic Subsequence of Given Difference</h3>
+      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        Не одразу зрозуміло що саме треба шукати. Це не підрядок. 
+        Підпослідовність це як окремі елементи з похідного масиву, 
+        які тільки у тому самому порядку йдуть, та відповідають заданим умовам.
+      </p>
+      <p id="14.07.2023" style="display: none;" class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        У цій проблемі це - різниця - ціле число на яке зростають/зменшуються 
+        числа у підпослідовності. Треба повернути довжину найбільшої підпослідовності.
+      </p>
+      <button 
+        tittle="Show more" 
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        onclick="if(document.getElementById('14.07.2023').style.display=='none') {document.getElementById('14.07.2023').style.display=''}else{document.getElementById('14.07.2023').style.display='none'}"
+      >Show/hide</button>
+  </li>
+  <li class="mb-10 ml-4">
+    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">15.07.2023</time>
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">All Nodes Distance K in Binary Tree</h3>
+    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+      Маючи корінь бінарного дерева, значення цільового вузла та ціле число k, 
+      поверніть масив значень усіх вузлів, які мають відстань k від цільового вузла.
+    </p>
+    <p id="15.07.2023" style="display: none;" class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+      Цікава проблема, яку не зовсім зрозуміло як вирішувати. 
+      Є найпростіший спосіб з додаванням зворотних зв'язків з батьківським елементом для 
+      зворотнього руху по дереву, але цей підхід вважається поганою практикою. 
+      Рекомендують робити всеспрямований граф і вже з ним працювати. 
+      Почати з target-елемента рекурсивно викликати BFS з передаванням глибини на 1 менше. 
+      І так доки глибина не дійде до нуля. Знайдені елементи заносятся до 
+      масиву результата.
+    </p>
+    <button 
+      tittle="Show more" 
+      class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+      onclick="if(document.getElementById('15.07.2023').style.display=='none') {document.getElementById('15.07.2023').style.display=''}else{document.getElementById('15.07.2023').style.display='none'}"
+    >Show/hide</button>
+</li>
+
+</ol>
+
+  </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
   <div class="flex flex-col max-w-2xl mx-auto">
     <div>
       <h1 class = "p-5 text-3xl font-bold underline"> 
-        Problem solving log from the LeetCode site
+        LeetCode's problems solving log
       </h1>
     </div>
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl shadow-xl bg-sky-500 text-white ">
         12.07.2023
       </p>
-      <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+      <div class="p-6 mx-auto bg-white rounded-xl shadow-2xl flex items-center space-x-4">
         <div class="shrink-0">
-          <img class="h-6 w-6" src="./img/check_mark.png" alt="Check Mark Logo">
+          <svg viewBox="0 0 306 306" width="20" title="check">
+            <path fill="#3ca500" d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5
+			               S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5
+			               c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"/>
+		        <path fill="#3ca500" d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678
+			               l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385
+			               c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"/>
+          </svg>
         </div>
         <div>
           <div class="p-2 text-xl font-medium text-black">Minimum Depth of Binary Tree</div>
@@ -35,7 +145,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         13.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -57,7 +167,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         14.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -79,7 +189,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         15.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -105,7 +215,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         16.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -131,7 +241,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         17.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -155,7 +265,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         18.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -183,7 +293,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         19.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -217,7 +327,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         20.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -251,7 +361,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         21.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -273,7 +383,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         22.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -308,7 +418,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         24.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -334,7 +444,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         25.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -366,7 +476,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         26.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -391,7 +501,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         27.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -431,7 +541,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         28.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -471,7 +581,7 @@
     </div>
 
     <div class="m-5">
-      <p class="p-1 max-w-fit m-2 rounded-xl bg-sky-500 shadow-xl text-white ">
+      <p class="p-1 max-w-fit my-2 rounded-xl bg-sky-500 shadow-xl text-white ">
         29.07.2023
       </p>
       <div class="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
