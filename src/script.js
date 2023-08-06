@@ -84,7 +84,7 @@ function posts(parentSelector) {
         }
     }
 
-    axios.get('http://127.0.0.1:5500/db.json')
+    axios.get('https://vchykov.github.io/Journal/db.json')
         .then(data => {
             console.log(data);
             data.data.posts.reverse().forEach(({
