@@ -1,4 +1,4 @@
-async function posts(parentSelector) { 
+function posts(parentSelector) { 
 
     class Post {
         constructor(date, type, title, text, textUnderSpoiler, parentSelector, last) {
@@ -24,7 +24,7 @@ async function posts(parentSelector) {
                         style="fill:none;stroke:#4caf50;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
                     </svg>
                     ` : ''}
-                    ${(this.type === 'not_recommended') ? `
+                    ${(this.type === 'problem') ? `
                     <svg width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
                         <title>ionicons-v5-a</title>
                         <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
@@ -44,7 +44,7 @@ async function posts(parentSelector) {
                         <line x1="192" y1="320" x2="320" y2="192" 
                         style="fill:none;stroke:#f44336;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
                     </svg>
-                 ` : ''}  
+                    ` : ''}  
                 </div>
                 <div class="h-8 flex lex-col">
                     <span class="self-center max-w-fit px-2 rounded-md bg-[#007bff] text-white text-xs font-bold">
@@ -63,7 +63,8 @@ async function posts(parentSelector) {
                             <p class="p-1.5" id="${this.date}" style="display:none">
                                 ${this.textUnderSpoiler}
                             </p>
-                            <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" type="button" 
+                            <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
+                            type="button" ${(this.textUnderSpoiler === undefined || this.textUnderSpoiler === '') ? `style="display:none"` : ''} 
                                 onclick="
                                     if(document.getElementById('${this.date}').style.display=='none') {
                                             document.getElementById('${this.date}').style.display='';
