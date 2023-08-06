@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
     <title>Timeline</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body class="font-['Arial'] text-gray-700 text-base font-normal">
 <div class="mb-3 border-b-2 border-grey-600">
@@ -12,19 +19,16 @@
     <h5 class="py-5 pl-6 text-left text-xl font-bold">Timeline</h5>
   </div>
 </div>
-<div class="max-w-[530px] pl-1 mt-7 mx-auto border-green-600">
-  <div class="pr-7 border-blue-600 flex flex-row">
+<div class="max-w-[530px] pl-1 mt-7 mx-auto main-content">
+  <!-- <div class="pr-7 border-blue-600 flex flex-row">
     <div class="px-4 w-16 mx-1 flex-none border-red-600 flex flex-col">
       <div class="flex-none h-8 border-lime-300">
-        <div class="h-8 w-8">
-          <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
-          <svg width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
-            <title>ionicons-v5-e</title><path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
-            style="fill:none;stroke:#4caf50;stroke-miterlimit:10;stroke-width:32px"/>
-            <polyline points="352 176 217.6 336 160 272" 
-            style="fill:none;stroke:#4caf50;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
-          </svg>
-        </div>
+        <svg width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
+          <title>ionicons-v5-e</title><path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
+          style="fill:none;stroke:#4caf50;stroke-miterlimit:10;stroke-width:32px"/>
+          <polyline points="352 176 217.6 336 160 272" 
+          style="fill:none;stroke:#4caf50;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
+        </svg>
       </div>
       <div class="flex-grow border-lime-300 flex flex-row" >
         <div class="w-px border-r border-gray-300 mx-auto"></div>
@@ -51,7 +55,6 @@
   <div class="pr-7 border-blue-600">
     <div class="h-8 border-yellow-600 flex flex-row">
       <div class="flex-none w-16 px-4 mx-1 border-cyan-400">
-        <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
         <svg width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
           <title>ionicons-v5-a</title>
           <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
@@ -82,11 +85,12 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="border-blue-600 pr-7 grid grid-cols-[72px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])">
-    <div class="px-4 w-16 mx-1 h-8">
+  </div> -->
+  <!-- <div>
+    <div class="pr-7 grid grid-cols-[72px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])">
+      <div class="px-4 w-16 mx-1 h-8"> -->
         <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
-        <svg width="32px" height="32px" viewBox="48 48 418 418" 
+      <!--  <svg width="32px" height="32px" viewBox="48 48 418 418" 
         xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-m</title>
         <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
         style="fill:none;stroke:#f44336;stroke-miterlimit:10;stroke-width:32px"/>
@@ -101,11 +105,11 @@
         Dec 12, 2019
       </span>
     </div>
-    <div class="flex-grow border-lime-300 flex flex-row" >
-      <!-- <div class="w-px border-r border-gray-300 mx-auto"></div> -->
+    <div class="flex-grow flex flex-row" >
+      <div class="w-px border-gray-300 border-r mx-auto"></div>
     </div>
-    <div class="pb-4 pt-1 border-cyan-400 ">
-      <div class="p-3 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
+    <div class="pb-4 pt-1 ">
+      <div class="p-3 mx-auto rounded-md shadow-2 hover:shadow-3">
         <div class="px-1.5 text-lg font-bold">Lorem Ipsum Failed</div>
         <p class="p-1.5">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -115,8 +119,10 @@
       </div>
     </div>
   </div> 
-</div>
+</div> -->
+  </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="src/script.js"></script> 
 </body>
 </html>

@@ -1,0 +1,25 @@
+{
+    "posts": [
+        {
+            "date": "Dec 12, 2019",
+            "type": "fail",
+            "title": "Lorem Ipsum Fail",
+            "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. ",
+            "textUnderSpoiler": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. "
+        },
+        {
+            "date": "Jan 25, 2020",
+            "type": "not_recommended",
+            "title": "Lorem Ipsum Not Recommended",
+            "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. ",
+            "textUnderSpoiler": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. "
+        },
+        {
+            "date": "Today",
+            "type": "successful",
+            "title": "Lorem Ipsum Successful",
+            "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. ",
+            "textUnderSpoiler": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem explicabo necessitatibus, vel reprehenderit. "
+        }
+    ]
+}
