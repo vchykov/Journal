@@ -9,6 +9,9 @@ function posts(parentSelector) {
             this.textUnderSpoiler = textUnderSpoiler;
             this.parent = document.querySelector(parentSelector);
             this.last = last;
+            if (this.date === (new Intl.DateTimeFormat("ru").format(new Date()))) {
+                this.date = "Today";
+            }
         }
 
         render() {
