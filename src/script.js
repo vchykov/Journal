@@ -63,14 +63,14 @@ function posts(parentSelector) {
                             <p class="p-1.5">
                                 ${this.text}
                             </p>
-                            <p class="p-1.5" id="${this.date}" style="display:none">
+                            <p class="p-1.5" id="${this.date}" style="display:none" >
                                 ${this.textUnderSpoiler}
                             </p>
                             <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
                             type="button" ${(this.textUnderSpoiler === undefined || this.textUnderSpoiler === '') ? `style="display:none"` : ''} 
                                 onclick="
                                     if(document.getElementById('${this.date}').style.display=='none') {
-                                            document.getElementById('${this.date}').style.display='';
+                                        document.getElementById('${this.date}').style.display='';
                                         document.getElementById('${this.date}').nextElementSibling.innerHTML='Hide';
                                     } else {
                                     document.getElementById('${this.date}').style.display='none';
@@ -89,7 +89,7 @@ function posts(parentSelector) {
 
     axios.get('https://vchykov.github.io/Journal/db.json')
         .then(data => {
-            console.log(data);
+            
             data.data.posts.reverse().forEach(({
                 date,
                 type,
