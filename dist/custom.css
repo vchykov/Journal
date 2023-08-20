@@ -1,0 +1,12 @@
+ul {
+    padding-left: 0.875rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+blockquote {
+    font-style: oblique;
+}

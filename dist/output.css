@@ -434,12 +434,6 @@ video {
   display: none;
 }
 
-ul {
-}
-
-h3 {
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1947,14 +1941,6 @@ h3 {
 
 .pl-1 {
   padding-left: 0.25rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
-.pl-2\.5 {
-  padding-left: 0.625rem;
 }
 
 .pl-6 {

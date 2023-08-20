@@ -65,13 +65,13 @@ function posts(parentSelector) {
                 <div class="pb-4 pt-1 ">
                     <div class="p-3 mx-auto rounded-md shadow-2 hover:shadow-3">
                         <div class="px-1.5 text-lg font-bold">${this.title}</div>
-                            <div class="p-1.5 ">
-                                ${this.text}
-                            </div>
-                            <div class="p-1.5" id="${this.date}" style="display:none" >
-                                ${this.textUnderSpoiler}
-                            </div>
-                            <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
+                        <div class="p-1.5 ">
+                            ${this.text}
+                        </div>
+                        <div class="p-1.5" id="${this.date}" style="display:none" >
+                            ${this.textUnderSpoiler}
+                        </div>
+                        <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
                             type="button" ${(this.textUnderSpoiler === undefined || this.textUnderSpoiler === '') ? `style="display:none"` : ''} 
                                 onclick="
                                     if(document.getElementById('${this.date}').style.display=='none') {
@@ -81,9 +81,8 @@ function posts(parentSelector) {
                                     document.getElementById('${this.date}').style.display='none';
                                     document.getElementById('${this.date}').nextElementSibling.innerHTML='Show more';
                                 }
-                                ">Show more
-                            </button>
-                        </div>
+                            ">Show more
+                        </button>
                     </div>
                 </div>
             </div>    

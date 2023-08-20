@@ -10,13 +10,6 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    plugin(function({ addBase, theme }) {
-      addBase({
-        'ul': { paddingLeft: theme('pl-2.5') },
-        'h3': { fontWeight: theme('font-bold') },
-      })
-    })
-  ]
+  plugins: []
 }
 
