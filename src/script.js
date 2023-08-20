@@ -1,6 +1,6 @@
 var md = window.markdownit({
     html: true,
-    break: true,
+    break: false,
     linkify: true,
     typographer: true,
   }).use(window.markdownitSup).use(window.markdownitSub);
