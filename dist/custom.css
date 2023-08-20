@@ -21,5 +21,10 @@ h3 {
 code {
     font-size: 0.875rem;  /* 14px */
     line-height: 1.25rem; /* 20px */
-    background-color: rgb(241 245 249);
+    background-color: rgb(217 217 217);
+    line-height: 1.5rem;
+    border-radius: 0.25rem; 
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+
