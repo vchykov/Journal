@@ -1,8 +1,6 @@
 var md = window.markdownit({
     html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true,
+    breaks: true
   }).use(window.markdownitSup).use(window.markdownitSub);
 
 function posts(parentSelector) { 
