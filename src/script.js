@@ -1,3 +1,9 @@
+var md = window.markdownit({
+    html: true,
+    linkify: true,
+    typographer: true,
+  }).use(window.markdownitSup).use(window.markdownitSub);
+
 function posts(parentSelector) { 
 
     class Post {
@@ -5,8 +11,8 @@ function posts(parentSelector) {
             this.date = date;
             this.type = type;
             this.title = title;
-            this.text = text;
-            this.textUnderSpoiler = textUnderSpoiler;
+            this.text = (text) ? md.render(text) : undefined;
+            this.textUnderSpoiler = (textUnderSpoiler) ? md.render(textUnderSpoiler) : undefined;
             this.parent = document.querySelector(parentSelector);
             this.last = last;
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
@@ -60,12 +66,12 @@ function posts(parentSelector) {
                 <div class="pb-4 pt-1 ">
                     <div class="p-3 mx-auto rounded-md shadow-2 hover:shadow-3">
                         <div class="px-1.5 text-lg font-bold">${this.title}</div>
-                            <p class="p-1.5">
+                            <div class="p-1.5">
                                 ${this.text}
-                            </p>
-                            <p class="p-1.5" id="${this.date}" style="display:none" >
+                            </div>
+                            <div class="p-1.5" id="${this.date}" style="display:none" >
                                 ${this.textUnderSpoiler}
-                            </p>
+                            </div>
                             <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
                             type="button" ${(this.textUnderSpoiler === undefined || this.textUnderSpoiler === '') ? `style="display:none"` : ''} 
                                 onclick="
