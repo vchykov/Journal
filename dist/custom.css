@@ -1,12 +1,24 @@
 ul {
     padding-left: 0.875rem;
-    font-style: oblique;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+ol {
+    padding-left: 0.875rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    list-style-type: decimal;
 }
 
 h3 {
     font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
-blockquote {
-    font-style: oblique;
+code {
+    font-size: 0.875rem;  /* 14px */
+    line-height: 1.25rem; /* 20px */
 }
