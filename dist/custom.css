@@ -21,4 +21,5 @@ h3 {
 code {
     font-size: 0.875rem;  /* 14px */
     line-height: 1.25rem; /* 20px */
+    background-color: rgb(241 245 249);
 }
