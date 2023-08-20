@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
@@ -9,6 +10,13 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addBase, theme }) {
+      addBase({
+        'ul': { paddingLeft: theme('pl-2.5') },
+        'h3': { fontWeight: theme('font-bold') },
+      })
+    })
+  ]
 }
 
