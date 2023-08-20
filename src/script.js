@@ -1,6 +1,6 @@
 var md = window.markdownit({
     html: true,
-    break: false,
+    breaks: false,
     linkify: true,
     typographer: true,
   }).use(window.markdownitSup).use(window.markdownitSub);
@@ -67,7 +67,7 @@ function posts(parentSelector) {
                 <div class="pb-4 pt-1 ">
                     <div class="p-3 mx-auto rounded-md shadow-2 hover:shadow-3">
                         <div class="px-1.5 text-lg font-bold">${this.title}</div>
-                            <div class="p-1.5">
+                            <div class="p-1.5 ">
                                 ${this.text}
                             </div>
                             <div class="p-1.5" id="${this.date}" style="display:none" >
@@ -108,6 +108,7 @@ function posts(parentSelector) {
                 if (index === arr.length - 1) {
                     last = true;
                 }
+               
                 new Post(date, type, title, text, textUnderSpoiler, parentSelector, last).render();
             });
         }).catch(e => {

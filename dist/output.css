@@ -800,16 +800,16 @@ video {
   height: 2rem;
 }
 
+.w-1 {
+  width: 0.25rem;
+}
+
 .w-16 {
   width: 4rem;
 }
 
 .w-px {
   width: 1px;
-}
-
-.max-w-\[530px\] {
-  max-width: 530px;
 }
 
 .max-w-\[770px\] {
@@ -1022,6 +1022,10 @@ video {
 
 .list-outside {
   list-style-position: outside;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .appearance-none {
@@ -2456,6 +2460,14 @@ video {
 .content-\[\'this-is-also-valid\]-weirdly-enough\'\] {
   --tw-content: 'this-is-also-valid]-weirdly-enough';
   content: var(--tw-content);
+}
+
+.\[-\:\|\\s\] {
+  -: |\s;
+}
+
+.\[-\:\|\] {
+  -: |;
 }
 
 @media (min-width: 640px) {
