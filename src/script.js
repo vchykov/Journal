@@ -11,7 +11,7 @@ function posts(parentSelector) {
             this.type = type;
             this.title = title;
             this.text = (text) ? md.render(text) : undefined;
-            this.textUnderSpoiler = (textUnderSpoiler) ? md.render(textUnderSpoiler) : undefined;
+            this.textUnderSpoiler = (textUnderSpoiler) ? md.render(md.render(textUnderSpoiler)) : undefined;
             this.parent = document.querySelector(parentSelector);
             this.last = last;
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
