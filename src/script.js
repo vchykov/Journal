@@ -1,6 +1,18 @@
+var hljs = require('highlight.js'); // https://highlightjs.org
 var md = window.markdownit({
     html: true,
-    breaks: true
+    breaks: true,
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return '<pre class="hljs"><code>' +
+                 hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
+                 '</code></pre>';
+        } catch (__) {}
+      }
+  
+      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+    }
   }).use(window.markdownitSup).use(window.markdownitSub);
 
 function posts(parentSelector) { 
