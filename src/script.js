@@ -1,13 +1,12 @@
-var hljs = require('highlight.js'); // https://highlightjs.org
 var md = window.markdownit({
     html: true,
     breaks: true,
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
         try {
-          return '<pre class="hljs"><code>' +
+          return '<pre class="hljs">' +
                  hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
-                 '</code></pre>';
+                 '</pre>';
         } catch (__) {}
       }
   

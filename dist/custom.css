@@ -34,8 +34,16 @@ blockquote {
     padding-left: 0.875rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border-right-width: 4px;
+    border-left-width: 4px;
     border-color: rgb(235 235 235);
+}
+
+pre {
+    font-size: 0.875rem;  /* 14px */
+    overflow: scroll;
+    border-color: rgb(235 235 235);
+    border-width: 1px;
+    border-radius: 5px;
 }
 
 
