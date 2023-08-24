@@ -30,6 +30,7 @@ code {
 }
 
 blockquote {
+    overflow: scroll;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     padding-left: 0.875rem;
     margin-top: 0.5rem;
@@ -39,8 +40,8 @@ blockquote {
 }
 
 pre {
-    font-size: 0.875rem;  /* 14px */
     overflow: scroll;
+    font-size: 0.875rem;  /* 14px */
     border-color: rgb(235 235 235);
     border-width: 1px;
     border-radius: 5px;
