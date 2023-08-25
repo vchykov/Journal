@@ -30,6 +30,10 @@ code {
 }
 
 blockquote {
+    font-style: italic; 
+}
+
+pre {
     overflow: scroll;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     padding-left: 0.875rem;
@@ -39,8 +43,9 @@ blockquote {
     border-color: rgb(235 235 235);
 }
 
-pre {
+pre code {   /*For listigs of programs */
     overflow: scroll;
+    background-color: none;
     font-size: 0.875rem;  /* 14px */
     border-color: rgb(235 235 235);
     border-width: 1px;
