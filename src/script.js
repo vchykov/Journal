@@ -4,13 +4,13 @@ var md = window.markdownit({
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
         try {
-          return '<pre class="hljs"><code>' +
+          return '<pre class="hljs">' +
                  hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
-                 '</code></pre>';
+                 '</pre>';
         } catch (__) {}
       }
   
-      return '<pre class="hljs">' + md.utils.escapeHtml(str) + '</pre>';
+      return '<pre"hljs">' + md.utils.escapeHtml(str) + '</pre>';
     }
   }).use(window.markdownitSup).use(window.markdownitSub);
 
