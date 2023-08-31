@@ -103,7 +103,7 @@ function posts(parentSelector) {
         }
     }
 
-    axios.get('/db.json')
+    axios.get('db.json')
         .then(data => {
             
             data.data.posts.reverse().forEach(({
@@ -121,7 +121,7 @@ function posts(parentSelector) {
                 new Post(date, type, title, text, textUnderSpoiler, parentSelector, last).render();
             });
         }).catch(e => {
-            console.log(e);
+            console.log(e);            
         });
 }
 
