@@ -33,8 +33,8 @@ function posts(parentSelector) {
         render() {
             const element = document.createElement('div');
             element.innerHTML = `
-            <div class="border-blue-600 pr-7 md:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] 
-                md:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])">
+            <div class="border-blue-600 pr-7 sm:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] 
+                sm:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])">
                 <div class="flex flex-row">
                     ${(this.type === 'successful') ? `
                     <svg class= "mx-auto" width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@ function posts(parentSelector) {
                     <div class="w-px border-gray-300 border-r mx-auto"></div>
                 </div>
                 <div class="pb-4 pt-1 ">
-                    <div class="p-3 md:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
+                    <div class="p-3 sm:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
                         <div class="px-1.5 text-lg font-bold">${this.title}</div>
                         <div class="p-1.5 ">
                             ${this.text}
