@@ -103,7 +103,7 @@ function posts(parentSelector) {
         }
     }
 
-    axios.get('db.json')
+    axios.get('./db.json')
         .then(data => {
             
             data.data.posts.reverse().forEach(({
