@@ -2554,25 +2554,12 @@ video {
     margin-bottom: 0px;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
-  }
-
   .md\:pl-0 {
     padding-left: 0px;
   }
 }
 
 @media (max-width: 439px) {
-  .sm\:my-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
-
   .sm\:grid-cols-\[42px\2c _minmax\(200px\2c _auto\)\] {
     grid-template-columns: 42px minmax(200px, auto);
   }

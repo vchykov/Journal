@@ -103,8 +103,7 @@ function posts(parentSelector) {
         }
     }
 
-   // axios.get('https://vchykov.github.io/Journal/db.json')
-   axios.get('db.json')
+    axios.get('/db.json')
         .then(data => {
             
             data.data.posts.reverse().forEach(({
