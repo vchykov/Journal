@@ -33,10 +33,11 @@ function posts(parentSelector) {
         render() {
             const element = document.createElement('div');
             element.innerHTML = `
-            <div class="pr-7 grid grid-cols-[72px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])">
-                <div class="px-4 w-16 mx-1 h-8">
+            <div class="border-blue-600 pr-7 md:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] 
+                md:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])">
+                <div class="flex flex-row">
                     ${(this.type === 'successful') ? `
-                    <svg width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
+                    <svg class= "mx-auto" width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
                         <title>ionicons-v5-e</title><path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
                         style="fill:none;stroke:#4caf50;stroke-miterlimit:10;stroke-width:32px"/>
                         <polyline points="352 176 217.6 336 160 272" 
@@ -44,7 +45,7 @@ function posts(parentSelector) {
                     </svg>
                     ` : ''}
                     ${(this.type === 'problem') ? `
-                    <svg width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
+                    <svg class= "mx-auto" width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
                         <title>ionicons-v5-a</title>
                         <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
                         style="fill:none;stroke:#ff9800;stroke-miterlimit:10;stroke-width:32px"/>
@@ -54,7 +55,7 @@ function posts(parentSelector) {
                     </svg>
                     ` : ''}
                     ${(this.type === 'fail') ? `
-                    <svg width="32px" height="32px" viewBox="48 48 418 418" 
+                    <svg class= "mx-auto" width="32px" height="32px" viewBox="48 48 418 418" 
                         xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-m</title>
                         <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
                         style="fill:none;stroke:#f44336;stroke-miterlimit:10;stroke-width:32px"/>
@@ -74,8 +75,8 @@ function posts(parentSelector) {
                     <div class="w-px border-gray-300 border-r mx-auto"></div>
                 </div>
                 <div class="pb-4 pt-1 ">
-                    <div class="p-3 mx-auto rounded-md shadow-2 hover:shadow-3">
-                        <div class="px-1.5 text-lg font-bold">${this.title}</div>
+                    <div class="p-3 md:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
+                        <div class="px-1.5 text-lg md:text-base font-bold">${this.title}</div>
                         <div class="p-1.5 ">
                             ${this.text}
                         </div>
