@@ -76,7 +76,7 @@ function posts(parentSelector) {
                 </div>
                 <div class="pb-4 pt-1 ">
                     <div class="p-3 md:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
-                        <div class="px-1.5 text-lg md:text-base font-bold">${this.title}</div>
+                        <div class="px-1.5 text-lg font-bold">${this.title}</div>
                         <div class="p-1.5 ">
                             ${this.text}
                         </div>
