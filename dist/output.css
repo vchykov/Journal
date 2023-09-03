@@ -853,18 +853,8 @@ video {
   width: 1px;
 }
 
-.min-w-min {
-  min-width: -moz-min-content;
-  min-width: min-content;
-}
-
-.min-w-full {
-  min-width: 100%;
-}
-
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+.min-w-0 {
+  min-width: 0px;
 }
 
 .max-w-\[800px\] {
@@ -878,15 +868,6 @@ video {
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-
-.max-w-min {
-  max-width: -moz-min-content;
-  max-width: min-content;
-}
-
-.max-w-full {
-  max-width: 100%;
 }
 
 .flex-none {
@@ -1897,6 +1878,11 @@ video {
   border-color: rgb(202 138 4 / var(--tw-border-opacity));
 }
 
+.bg-\[\#007bff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -1920,11 +1906,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#007bff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
