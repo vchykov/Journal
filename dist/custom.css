@@ -81,3 +81,47 @@ pre {
         margin-bottom: 0.375rem;
     }
 }
+
+input[type="radio"]{
+    display:none;
+}
+
+.radio-successful input[type=radio] + label  {
+    background: url(../img/successful-grey.svg);
+    margin-left: 23px;
+    height: 32px;
+    width: 32px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+
+}
+.radio-successful input[type=radio]:checked + label {
+    background: url(../img/successful.svg);
+}
+
+.radio-problem input[type=radio] + label  {
+    background: url(../img/problem-grey.svg);
+    margin-left: 23px;
+    height: 32px;
+    width: 32px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+
+}
+.radio-problem input[type=radio]:checked + label {
+    background: url(../img/problem.svg);
+}
+
+.radio-fail input[type=radio] + label  {
+    background: url(../img/fail-grey.svg);
+    margin-left: 23px;
+    height: 32px;
+    width: 32px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+
+}
+.radio-fail input[type=radio]:checked + label {
+    background: url(../img/fail.svg);
+}
+

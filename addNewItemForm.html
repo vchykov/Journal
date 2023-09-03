@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./dist/output.css" rel="stylesheet">
+        <link href="./dist/custom.css" rel="stylesheet">
+        <title>Timeline</title>
+    
+        <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+        <link rel="manifest" href="./img/site.webmanifest">
+        <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="bg-tl-sky">
+        <div
+            class="max-w-[800px] m-auto my-[3%] md:my-0 bg-white rounded-md shadow-2 font-['Arial']
+                text-gray-700 text-base font-normal border-grey-600"
+        >
+            <div class="header h-16 border-b-2 flex justify-between">
+                <nav class="my-auto ml-6">
+                    <a href="/"><img src="./img/back.svg" class="h-6"/></a>
+                </nav>
+                <div class="my-auto">
+                    <h1 class="text-xl font-bold">Add New Post</h1> 
+                </div>
+                <div></div>               
+            </div>
+            <form class="p-6 sm:p-4 pt-5 mx-auto text-base">
+                <div class="flex flex-row sm:flex-col">
+                    <fieldset class="basis-1/2">
+                        <label for="date-input"> Date: <span class="text-red-500">*</span></label>
+                        <input
+                            class="block border w-24 h-10 rounded-md px-1 mt-1 mb-5 focus:outline-none 
+                                focus:border-tl-blue hover:shadow-4"
+                            type="text"
+                            id="date-input"
+                            name="date"
+                            minlength="10"
+                            maxlength="10"
+                            placeholder="dd.MM.yyyy"
+                            required
+                        />
+                    </fieldset>
+                    <fieldset class="basis-1/2">
+                        <legend>Status: <span class="text-red-500">*</span></legend>
+                        <div class="flex flex-row border rounded-md w-min h-10 mt-1 mb-5 hover:shadow-4">
+                            <div class="w-20 h-[38px] pt-[3px] radio-successful">
+                                <input
+                                    type="radio"
+                                    id="successful"
+                                    name="status"
+                                    value="successful"
+                                    checked
+                                    required
+                                />
+                                <label for="successful" ></label>
+                            </div>
+
+                            <div class="w-20 h-[38px] pt-[3px] border-x radio-problem">
+                                <input type="radio" id="problem" name="status" value="problem" required  />
+                                <label for="problem"></label>
+                            </div>
+
+                            <div class="w-20 h-[38px] pt-[3px] radio-fail">
+                                <input type="radio" id="fail" name="status" value="fail" required  />
+                                <label for="fail"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <fieldset>
+                    <label for="title-input"> Title: <span class="text-red-500">*</span></label>
+                    <input
+                        class="block border w-full h-10 rounded-md px-1 mt-1 mb-5 focus:outline-none 
+                            focus:border-tl-blue hover:shadow-4"
+                        type="text"
+                        id="title-input"
+                        name="title"
+                        minlength="5"
+                        placeholder="Enter your title here"
+                        required
+                    />
+                </fieldset>
+                <fieldset>
+                    <label for="text"> Text: <span class="text-red-500">*</span></label>
+                    <textarea
+                        id="text"
+                        name="text"
+                        placeholder="Enter your post here..."
+                        required
+                        class="block w-full h-96 sm:h-64 border rounded-md rounded-ee-none px-1 py-2 mt-1 
+                            focus:outline-none focus:border-tl-blue hover:shadow-4"
+                    ></textarea>
+                </fieldset>
+                <fieldset class="mt-6 sm:mt-4 flex justify-evenly sm:justify-normal sm:flex-col sm:gap-4 text-lg font-bold">
+                    <button type="submit" class="w-4/12 h-10 sm:w-full rounded-md bg-tl-blue text-white hover:shadow-4">
+                        Publish
+                    </button>
+                    <button
+                        type="reset"
+                        class="w-4/12 h-10 sm:w-full border border-tl-blue rounded-md text-tl-blue hover:shadow-4"
+                    >
+                        Cancel
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

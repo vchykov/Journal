@@ -7,6 +7,11 @@ module.exports = {
       boxShadow: {
         '2': 'rgba(99, 99, 99, 0.2) 0px 0px 10px 0px;',
         '3': 'rgba(99, 99, 99, 0.2) 0px 0px 20px 0px;',
+        '4': 'rgba(0, 133, 255, 1.0) 0px 0px 4px 0px;',
+      }, 
+      colors: {
+        'tl-blue':'#007bff',
+        'tl-sky':'#fafcff'
       }
     },
     screens: {
