@@ -804,20 +804,16 @@ video {
   height: 1.5rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
 .h-8 {
   height: 2rem;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
 .h-\[38px\] {
   height: 38px;
-}
-
-.h-72 {
-  height: 18rem;
 }
 
 .w-1 {
@@ -857,24 +853,6 @@ video {
   width: 1px;
 }
 
-.min-w-min {
-  min-width: -moz-min-content;
-  min-width: min-content;
-}
-
-.min-w-full {
-  min-width: 100%;
-}
-
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-
-.min-w-0 {
-  min-width: 0px;
-}
-
 .max-w-\[800px\] {
   max-width: 800px;
 }
@@ -886,15 +864,6 @@ video {
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-
-.max-w-min {
-  max-width: -moz-min-content;
-  max-width: min-content;
-}
-
-.max-w-full {
-  max-width: 100%;
 }
 
 .flex-none {
@@ -1905,6 +1874,19 @@ video {
   border-color: rgb(202 138 4 / var(--tw-border-opacity));
 }
 
+.border-inherit {
+  border-color: inherit;
+}
+
+.border-current {
+  border-color: currentColor;
+}
+
+.bg-\[\#007bff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -1928,11 +1910,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#007bff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
@@ -2641,6 +2618,29 @@ video {
   }
 }
 
+.first\:border-transparent:first-child {
+  border-color: transparent;
+}
+
+.last\:border-transparent:last-child {
+  border-color: transparent;
+}
+
+.required\:border-red-500:required {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.invalid\:border-red-500:invalid {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.empty\:border-tl-blue:empty {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 123 255 / var(--tw-border-opacity));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -2719,16 +2719,12 @@ video {
     margin-top: 1rem;
   }
 
-  .sm\:h-6 {
-    height: 1.5rem;
-  }
-
-  .sm\:h-60 {
-    height: 15rem;
-  }
-
   .sm\:h-56 {
     height: 14rem;
+  }
+
+  .sm\:h-6 {
+    height: 1.5rem;
   }
 
   .sm\:w-6 {

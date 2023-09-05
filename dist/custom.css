@@ -124,4 +124,3 @@ input[type="radio"]{
 .radio-fail input[type=radio]:checked + label {
     background: url(../img/fail.svg);
 }
-

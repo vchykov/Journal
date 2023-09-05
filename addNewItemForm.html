@@ -30,7 +30,7 @@
                 </div>
                 <div></div>               
             </div>
-            <form class="p-6 sm:p-4 pt-5 mx-auto text-base">
+            <form class="p-6 sm:p-4 pt-5 mx-auto text-base" method="post">
                 <div class="flex flex-row sm:flex-col">
                     <fieldset class="basis-1/2">
                         <label for="date-input"> Date: <span class="text-red-500">*</span></label>
@@ -40,11 +40,11 @@
                             type="text"
                             id="date-input"
                             name="date"
-                            minlength="10"
-                            maxlength="10"
                             placeholder="dd.MM.yyyy"
+                            pattern="^(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).\d{4}$"
                             required
                         />
+                        <span class="validity"></span>
                     </fieldset>
                     <fieldset class="basis-1/2">
                         <legend>Status: <span class="text-red-500">*</span></legend>
@@ -55,8 +55,8 @@
                                     id="successful"
                                     name="status"
                                     value="successful"
-                                    checked
                                     required
+                                    checked
                                 />
                                 <label for="successful" ></label>
                             </div>
@@ -78,7 +78,7 @@
                     <label for="title-input"> Title: <span class="text-red-500">*</span></label>
                     <input
                         class="block border w-full h-10 rounded-md px-1 mt-1 mb-5 focus:outline-none 
-                            focus:border-tl-blue hover:shadow-4"
+                            focus:border-tl-blue hover:shadow-4 "
                         type="text"
                         id="title-input"
                         name="title"
@@ -95,7 +95,7 @@
                         placeholder="Enter your post here..."
                         required
                         class="block w-full h-72 sm:h-56 border rounded-md rounded-ee-none px-1 py-2 mt-1 
-                            focus:outline-none focus:border-tl-blue hover:shadow-4"
+                            focus:outline-none focus:border-tl-blue hover:shadow-4 "
                     ></textarea>
                 </fieldset>
                 <fieldset class="mt-6 sm:mt-4 flex justify-evenly sm:justify-normal sm:flex-col sm:gap-4 text-lg font-bold">
