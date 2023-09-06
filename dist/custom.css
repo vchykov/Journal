@@ -87,40 +87,49 @@ input[type="radio"]{
 }
 
 .radio-successful input[type=radio] + label  {
-    background: url(../img/successful-grey.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-image: url(../img/successful.svg);
+    mask-image: url(../img/successful.svg);
     margin-left: 23px;
     height: 32px;
     width: 32px;
+    background-color: #C0C0BF;
     display:inline-block;
     padding: 0 0 0 0px;
-
 }
 .radio-successful input[type=radio]:checked + label {
-    background: url(../img/successful.svg);
+    background-color: #4caf50;
 }
 
 .radio-problem input[type=radio] + label  {
-    background: url(../img/problem-grey.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-image: url(../img/problem.svg);
+    mask-image: url(../img/problem.svg);
     margin-left: 23px;
     height: 32px;
     width: 32px;
+    background-color: #C0C0BF;
     display:inline-block;
     padding: 0 0 0 0px;
-
 }
 .radio-problem input[type=radio]:checked + label {
-    background: url(../img/problem.svg);
+    background-color: #ff9800;
 }
 
 .radio-fail input[type=radio] + label  {
-    background: url(../img/fail-grey.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-image: url(../img/fail.svg);
+    mask-image: url(../img/fail.svg);
     margin-left: 23px;
     height: 32px;
     width: 32px;
+    background-color: #C0C0BF;
     display:inline-block;
     padding: 0 0 0 0px;
-
 }
 .radio-fail input[type=radio]:checked + label {
-    background: url(../img/fail.svg);
+    background-color: #f44336;
 }
