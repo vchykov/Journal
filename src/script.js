@@ -14,17 +14,29 @@ var md = window.markdownit({
     }
   }).use(window.markdownitSup).use(window.markdownitSub);
 
+  const textSplitter = function* (str) {
+        const tag = '#spoiler#';
+        const index = str.search(tag);
+        if (index === -1) {
+            yield str;
+            yield undefined;
+        } else {
+            yield str.substring(0, index);
+            yield str.substring(index + tag.length);
+        }
+  }
+
 function posts(parentSelector) { 
 
     class Post {
-        constructor(date, type, title, text, textUnderSpoiler, parentSelector, last) {
-            this.date = date;
+        constructor(date, type, title, textPreview, textUnderSpoiler, parentSelector) {
+            this.date = date.split('-').reverse().join('.');
             this.type = type;
             this.title = title;
-            this.text = (text) ? md.render(text) : undefined;
+            this.textPreview = (textPreview) ? md.render(textPreview) : undefined;
             this.textUnderSpoiler = (textUnderSpoiler) ? md.render(textUnderSpoiler) : undefined;
             this.parent = document.querySelector(parentSelector);
-            this.last = last;
+
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
                 this.date = "Today";
             }
@@ -58,7 +70,7 @@ function posts(parentSelector) {
                         <div class="p-3 sm:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
                             <div class="px-1.5 text-lg font-bold">${this.title}</div>
                             <div class="p-1.5 ">
-                                ${this.text}
+                                ${this.textPreview}
                             </div>
                             <div class="p-1.5" id="${this.date}" style="display:none" >
                                 ${this.textUnderSpoiler}
@@ -90,10 +102,12 @@ function posts(parentSelector) {
                 date,
                 type,
                 title,
-                text,
-                textUnderSpoiler
+                text
             }) => {
-                new Post(date, type, title, text, textUnderSpoiler, parentSelector).render();
+                const iterator = textSplitter(text);
+                const textPreview = iterator.next().value;
+                const textUnderSpoiler = iterator.next().value;
+                new Post(date, type, title, textPreview, textUnderSpoiler, parentSelector).render();
             });
         }).catch(e => {
             console.log(e);            
