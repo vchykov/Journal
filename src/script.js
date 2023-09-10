@@ -14,17 +14,6 @@ var md = window.markdownit({
     }
   }).use(window.markdownitSup).use(window.markdownitSub);
 
-  const textSplitter = function* (str) {
-        const tag = '#spoiler#';
-        const index = str.search(tag);
-        if (index === -1) {
-            return str;
-        } else {
-            yield str.substring(0, index);
-            return str.substring(index + tag.length);
-        }
-  }
-
 function posts(parentSelector) { 
 
     class Post {
@@ -32,9 +21,9 @@ function posts(parentSelector) {
             this.date = date.split('-').reverse().join('.');
             this.type = type;
             this.title = title;
-            const gen = textSplitter(md.render(text));
-            this.textPreview = gen.next().value;
-            this.textUnderSpoiler = gen.next().value;
+            const t = md.render(text).split('#spoiler#');
+            this.textPreview = t[0];
+            this.textUnderSpoiler = t[1];
             this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
