@@ -18,23 +18,23 @@ var md = window.markdownit({
         const tag = '#spoiler#';
         const index = str.search(tag);
         if (index === -1) {
-            yield str;
-            yield undefined;
+            return str;
         } else {
             yield str.substring(0, index);
-            yield str.substring(index + tag.length);
+            return str.substring(index + tag.length);
         }
   }
 
 function posts(parentSelector) { 
 
     class Post {
-        constructor(date, type, title, textPreview, textUnderSpoiler, parentSelector) {
+        constructor(date, type, title, text, parentSelector) {
             this.date = date.split('-').reverse().join('.');
             this.type = type;
             this.title = title;
-            this.textPreview = (textPreview) ? md.render(textPreview) : undefined;
-            this.textUnderSpoiler = (textUnderSpoiler) ? md.render(textUnderSpoiler) : undefined;
+            const gen = textSplitter(md.render(text));
+            this.textPreview = gen.next().value;
+            this.textUnderSpoiler = gen.next().value;
             this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
@@ -104,10 +104,8 @@ function posts(parentSelector) {
                 title,
                 text
             }) => {
-                const iterator = textSplitter(text);
-                const textPreview = iterator.next().value;
-                const textUnderSpoiler = iterator.next().value;
-                new Post(date, type, title, textPreview, textUnderSpoiler, parentSelector).render();
+
+                new Post(date, type, title, text, parentSelector).render();
             });
         }).catch(e => {
             console.log(e);            
