@@ -31,7 +31,7 @@ function posts(parentSelector) {
         }
 
         render() {
-            const element = document.createElement('div');
+            const element = document.createElement('section');
             element.innerHTML = `
                 <div class="border-blue-600 pr-7 sm:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] 
                     sm:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[_minmax(24px,_auto)],_minmax(100px,_auto)])">
@@ -51,8 +51,8 @@ function posts(parentSelector) {
                             ${this.date}
                         </span>
                     </div>
-                    <div class="flex-grow flex flex-row ${(this.last) ? 'invisible' : ''}">
-                        <div class="w-px border-gray-300 border-r mx-auto"></div>
+                    <div class="flex-grow flex flex-row }">
+                        <div class="time-line  w-px border-gray-300 border-r mx-auto"></div>
                     </div>
                     <div class="pb-4 pt-1 ">
                         <div class="p-3 sm:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
@@ -92,13 +92,8 @@ function posts(parentSelector) {
                 title,
                 text,
                 textUnderSpoiler
-            }, index, arr) => {
-                let last = false;
-                if (index === arr.length - 1) {
-                    last = true;
-                }
-               
-                new Post(date, type, title, text, textUnderSpoiler, parentSelector, last).render();
+            }) => {
+                new Post(date, type, title, text, textUnderSpoiler, parentSelector).render();
             });
         }).catch(e => {
             console.log(e);            

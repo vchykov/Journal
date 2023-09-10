@@ -4,111 +4,140 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./dist/output.css" rel="stylesheet" />
+        <link href="./dist/custom.css" rel="stylesheet" />
         <title>Timeline</title>
     </head>
     <body class="bg-tl-sky">
         <div
             class="max-w-[800px] m-auto my-[3%] md:my-0 bg-white rounded-md shadow-2 font-['Arial'] text-gray-700 text-base sm:text-sm font-normal border-red-600"
         >
-            <div class="header h-16 border-b-2 border-grey-600 flex justify-between ">
+            <div class="header h-16 border-b-2 border-grey-600 flex justify-between">
                 <div class="my-auto ml-6">
-                    <h1 class="text-xl font-bold">Timeline</h1>  
+                    <h1 class="text-xl font-bold">Timeline</h1>
                 </div>
                 <nav class="my-auto mr-6">
-                    <a href="./addNewItemForm.html"><img src="./img/add.svg" class="h-6"/></a>
+                    <a href="./addNewItemForm.html"><img src="./img/add.svg" class="h-6" /></a>
                 </nav>
             </div>
-            <div class="pl-1 md:pl-0 pt-7 mx-auto ">
-                <div class="pr-7 sm:pr-5 flex flex-row ">
-                    <div class="px-4 sm:px-1.5 w-16 sm:w-9 mx-1 sm:mx-0.5 flex-none border-red-600 flex flex-col ">
-                        <div class="flex-none h-8 sm:h-6 border-lime-300">
-                            <div class="h-8 w-8 sm:h-6 sm:w-6">
+            <div class="pl-1 md:pl-0 pt-7 mx-auto">
+                <section>
+                    <div class="pr-7 sm:pr-5 flex flex-row">
+                        <div class="px-4 sm:px-1.5 w-16 sm:w-9 mx-1 sm:mx-0.5 flex-none flex flex-col">
+                            <div class="flex-none h-8 sm:h-6 border-lime-300">
+                                <div class="h-8 w-8 sm:h-6 sm:w-6">
+                                    <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
+                                    <!-- <img src="./img/successful.svg" alt="Successful" class="mx-auto w-8 h-8 sm:h-6 sm:w-6" /> -->
+                                    <svg
+                                        class="mx-auto w-8 h-8 sm:h-6 sm:w-6 text-blue-500"
+                                        width="32px"
+                                        height="32px"
+                                        viewBox="48 48 418 418"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <title>ionicons-v5-e</title>
+                                        <path
+                                            d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z"
+                                            style="
+                                                fill: none;
+                                                stroke: currentColor;
+                                                stroke-miterlimit: 10;
+                                                stroke-width: 32px;
+                                            "
+                                        />
+                                        <polyline
+                                            points="352 176 217.6 336 160 272"
+                                            style="
+                                                fill: none;
+                                                stroke: currentColor;
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                                stroke-width: 32px;
+                                            "
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex-grow flex flex-row">
+                                <div class="time-line w-px border-r border-grey-300 mx-auto"></div>
+                            </div>
+                        </div>
+                        <div class="flex-grow border-red-600">
+                            <div class="h-8 sm:h-6 border-lime-300 flex items-center">
+                                <span class="max-w-fit px-2 rounded-md bg-tl-blue text-white text-xs font-bold">
+                                    Today
+                                </span>
+                            </div>
+                            <div class="border-lime-300 pb-4 pt-1">
+                                <div class="p-3 sm:p-1 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
+                                    <div class="px-1.5 text-lg font-bold">Lorem Ipsum Successful</div>
+                                    <p class="p-1.5">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem
+                                        explicabo necessitatibus, vel reprehenderit.
+                                    </p>
+                                    <a class="p-1.5 text-[#007bff]">View more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="pr-7">
+                        <div class="h-8 border-yellow-600 flex flex-row">
+                            <div class="flex-none w-16 px-4 mx-1 border-cyan-400">
                                 <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
-                                <!-- <img src="./img/successful.svg" alt="Successful" class="mx-auto w-8 h-8 sm:h-6 sm:w-6" /> -->
-                                <svg class="mx-auto w-8 h-8 sm:h-6 sm:w-6 text-blue-500" width="32px" height="32px" viewBox="48 48 418 418" xmlns="http://www.w3.org/2000/svg">
-                                    <title>ionicons-v5-e</title><path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" 
-                                    style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/>
-                                    <polyline points="352 176 217.6 336 160 272" 
-                                    style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
-                                </svg>
+                                <img src="./img/problem.svg" alt="Problem" class="mx-auto w-8 h-8" />
+                            </div>
+                            <div class="flex-grow border-cyan-400 flex items-center">
+                                <span class="max-w-fit px-2 rounded-md bg-tl-blue text-white text-xs font-bold">
+                                    Jan 25, 2020
+                                </span>
                             </div>
                         </div>
-                        <div class="flex-grow  flex flex-row">
-                            <div class="w-px border-r border-gray-300 mx-auto"></div>
-                        </div>
-                    </div>
-                    <div class="flex-grow border-red-600">
-                        <div class="h-8 sm:h-6 border-lime-300 flex items-center">
-                            <span class="max-w-fit px-2 rounded-md bg-tl-blue text-white text-xs font-bold">
-                                Today
-                            </span>
-                        </div>
-                        <div class="border-lime-300 pb-4 pt-1">
-                            <div class="p-3 sm:p-1 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
-                                <div class="px-1.5 text-lg font-bold">Lorem Ipsum Successful</div>
-                                <p class="p-1.5">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem
-                                    explicabo necessitatibus, vel reprehenderit.
-                                </p>
-                                <a class="p-1.5 text-[#007bff]">View more</a>
+                        <div class="flex flex-row">
+                            <div class="flex-none w-16 px-4 mx-1 flex flex-row">
+                                <div class="time-line w-px border-r border-grey-300 mx-auto"></div>
+                            </div>
+                            <div class="flex-grow pb-4 pt-1 border-cyan-400">
+                                <div class="p-3 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
+                                    <div class="px-1.5 text-lg font-bold">Lorem Ipsum Not Recommended</div>
+                                    <p class="p-1.5">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem
+                                        explicabo necessitatibus, vel reprehenderit.
+                                    </p>
+                                    <a class="p-1.5 text-[#007bff]">View more</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pr-7 border-blue-600 ">
-                    <div class="h-8 border-yellow-600 flex flex-row">
-                        <div class="flex-none w-16 px-4 mx-1 border-cyan-400">
+                </section>
+                <section>
+                    <div
+                        class="post pr-7 sm:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] sm:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])"
+                    >
+                        <div class="flex flex-row">
                             <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
-                            <img src="./img/problem.svg" alt="Problem" class="mx-auto w-8 h-8" />
+                            <img src="./img/fail.svg" alt="Fail" class="mx-auto w-8 h-8" />
                         </div>
-                        <div class="flex-grow border-cyan-400 flex items-center">
-                            <span class="max-w-fit px-2 rounded-md bg-tl-blue text-white text-xs font-bold">
-                                Jan 25, 2020
+                        <div class="h-8 flex lex-col">
+                            <span class="self-center max-w-fit px-2 rounded-md bg-tl-blue text-white text-xs font-bold">
+                                Dec 12, 2019
                             </span>
                         </div>
-                    </div>
-                    <div class="border-yellow-600 flex flex-row">
-                        <div class="flex-none w-16 px-4 mx-1 border-cyan-400 flex flex-row">
-                            <div class="w-px border-r border-gray-300 mx-auto"></div>
+                        <div class="flex-grow flex flex-row">
+                            <div class="time-line w-px border-r border-grey-300 mx-auto"></div>
                         </div>
-                        <div class="flex-grow pb-4 pt-1 border-cyan-400">
-                            <div class="p-3 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
-                                <div class="px-1.5 text-lg font-bold">Lorem Ipsum Not Recommended</div>
+                        <div class="pb-4 pt-1 border-cyan-400">
+                            <div class="p-3 sm:p-1 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
+                                <div class="px-1.5 text-lg sm:text-base font-bold">Lorem Ipsum Failed</div>
                                 <p class="p-1.5">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem
                                     explicabo necessitatibus, vel reprehenderit.
                                 </p>
-                                <a class="p-1.5 text-[#007bff]">View more</a>
+                                <a class="p-1.5 text-tl-blue">View more</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    class="border-blue-600 pr-7 sm:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] sm:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[32px,_minmax(100px,_auto)])"
-                >
-                    <div class="flex flex-row">
-                        <!-- <div class="h-8 w-8 bg-green-500 rounded-2xl"></div> -->
-                        <img src="./img/fail.svg" alt="Fail" class="mx-auto w-8 h-8" />
-                    </div>
-                    <div class="h-8 flex lex-col">
-                        <span class="self-center max-w-fit px-2 rounded-md bg-tl-blue text-white text-xs font-bold">
-                            Dec 12, 2019
-                        </span>
-                    </div>
-                    <div class="flex-grow border-lime-300 flex flex-row">
-                        <div class="w-px border-r border-gray-300 mx-auto"></div>
-                    </div>
-                    <div class="pb-4 pt-1 border-cyan-400">
-                        <div class="p-3 sm:p-1 mx-auto bg-white rounded-md shadow-2 hover:shadow-3">
-                            <div class="px-1.5 text-lg sm:text-base font-bold">Lorem Ipsum Failed</div>
-                            <p class="p-1.5">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat fugit dolorem
-                                explicabo necessitatibus, vel reprehenderit.
-                            </p>
-                            <a class="p-1.5 text-tl-blue">View more</a>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
         </div>
     </body>

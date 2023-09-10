@@ -1854,6 +1854,10 @@ video {
   border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
+.border-inherit {
+  border-color: inherit;
+}
+
 .border-lime-300 {
   --tw-border-opacity: 1;
   border-color: rgb(190 242 100 / var(--tw-border-opacity));
@@ -1987,14 +1991,6 @@ video {
 
 .bg-origin-content {
   background-origin: content-box;
-}
-
-.fill-blue-500 {
-  fill: #3b82f6;
-}
-
-.stroke-blue-500 {
-  stroke: #3b82f6;
 }
 
 .object-contain {

@@ -133,3 +133,7 @@ input[type="radio"]{
 .radio-fail input[type=radio]:checked + label {
     background-color: #f44336;
 }
+
+section:last-child .time-line {
+    display: none;
+}
