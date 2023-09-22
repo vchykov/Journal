@@ -12,7 +12,21 @@ var md = window.markdownit({
   
       return '<pre"hljs">' + md.utils.escapeHtml(str) + '</pre>';
     }
-  }).use(window.markdownitSup).use(window.markdownitSub);
+  }).use(window.markdownitSup).use(window.markdownitSub).use(
+    function markdownItUnderline (md) {
+
+        function renderEm (tokens, idx, opts, _, slf) {
+          var token = tokens[idx];
+          if (token.markup === '_') {
+            token.tag = 'u';
+          }
+          return slf.renderToken(tokens, idx, opts);
+        }
+      
+        md.renderer.rules.em_open = renderEm;
+        md.renderer.rules.em_close = renderEm;
+      }
+  );
 
 function posts(parentSelector) { 
 
@@ -23,8 +37,8 @@ function posts(parentSelector) {
             this.title = title;
             const t = md.render(text).split('#spoiler#');
             this.textPreview = t[0];
-            this.textUnderSpoiler = t[1];
-            this.parent = document.querySelector(parentSelector);
+            this.textUnderSpoiler = t[1].replaceAll('|||', '<code>').replaceAll('|/|', '</code>'); // this is a crutch
+              this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
                 this.date = "Today";
