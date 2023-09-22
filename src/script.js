@@ -35,9 +35,9 @@ function posts(parentSelector) {
             this.date = date.split('-').reverse().join('.');
             this.type = type;
             this.title = title;
-            const t = md.render(text).split('#spoiler#');
+            const t = md.render(text).replaceAll('|||', '<code>').replaceAll('|/|', '</code>').split('#spoiler#'); // this is a crutch;
             this.textPreview = t[0];
-            this.textUnderSpoiler = t[1].replaceAll('|||', '<code>').replaceAll('|/|', '</code>'); // this is a crutch
+            this.textUnderSpoiler = t[1];
               this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
