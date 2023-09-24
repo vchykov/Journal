@@ -29,9 +29,11 @@ code, blockquote {
 
 code {
     background-color: rgb(247 247 248);
+    border-color: rgb(234 234 235);
+    border-width: 1px;
     line-height: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
     border-radius: 0.25rem; 
     font-variant-numeric: slashed-zero;
 }
