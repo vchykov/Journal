@@ -12,7 +12,7 @@ var md = window.markdownit({
   
       return '<pre"hljs">' + md.utils.escapeHtml(str) + '</pre>';
     }
-  }).use(window.markdownitSup).use(window.markdownitSub).use(
+  }).use(window.markdownitSup).use(window.markdownitSub).use(window.markdownitAbbr).use(
     function markdownItUnderline (md) {
 
         function renderEm (tokens, idx, opts, _, slf) {
