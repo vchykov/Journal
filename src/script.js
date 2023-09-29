@@ -1,5 +1,7 @@
 var md = window.markdownit({
     html: true,
+    linkify: true,
+    typography: true,
     breaks: true,
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
