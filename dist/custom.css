@@ -54,6 +54,10 @@ pre {
     border-radius: 5px;
 }
 
+abbr {
+    color: #1890ff;
+    text-decoration: none;
+}
 @media screen and (max-width: 439px) {
     ul, ol {
        /* padding-left: 0.75rem;*/
