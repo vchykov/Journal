@@ -33,14 +33,13 @@ var md = window.markdownit({
 function posts(parentSelector) { 
 
     class Post {
-        constructor(date, type, title, text, parentSelector) {
+        constructor(date, status, title, text, parentSelector) {
             this.date = date.split('-').reverse().join('.');
-            this.type = type;
+            this.status = status;
             this.title = title;
-            const t = md.render(text).replaceAll('|{|', '<code>').replaceAll('|}|', '</code>').split('#spoiler#'); // this is a crutch;
-            this.textPreview = t[0];
-            this.textUnderSpoiler = t[1];
-              this.parent = document.querySelector(parentSelector);
+            [this.textPreview, this.textUnderSpoiler] = md.render(text).
+                replaceAll('|{|', '<code>').replaceAll('|}|', '</code>').split('#spoiler#'); // this is a crutch;
+            this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
                 this.date = "Today";
@@ -53,13 +52,13 @@ function posts(parentSelector) {
                 <div class="border-blue-600 pr-7 sm:pr-5 grid grid-cols-[72px,_minmax(200px,_auto)] 
                     sm:grid-cols-[42px,_minmax(200px,_auto)] grid-rows-[_minmax(24px,_auto)],_minmax(100px,_auto)])">
                     <div class="flex flex-row h-8 sm:h-6">
-                        ${(this.type === 'successful') ? `
+                        ${(this.status === 'successful') ? `
                         <img src="./img/successful.svg" alt="Successful" class="mx-auto w-8 h-8 sm:h-6 sm:w-6" />
                         ` : ''}
-                        ${(this.type === 'problem') ? `  
+                        ${(this.status === 'problem') ? `  
                         <img src="./img/problem.svg" alt="Problem" class="mx-auto w-8 h-8 sm:h-6 sm:w-6" />
                         ` : ''}
-                        ${(this.type === 'fail') ? `
+                        ${(this.status === 'fail') ? `
                         <img src="./img/fail.svg" alt="Fail" class="mx-auto w-8 h-8 sm:h-6 sm:w-6" />
                         ` : ''}  
                     </div>
@@ -105,12 +104,12 @@ function posts(parentSelector) {
             
             data.data.posts.reverse().forEach(({
                 date,
-                type,
+                status,
                 title,
                 text
             }) => {
 
-                new Post(date, type, title, text, parentSelector).render();
+                new Post(date, status, title, text, parentSelector).render();
             });
         }).catch(e => {
             console.log(e);            
