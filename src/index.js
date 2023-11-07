@@ -7,7 +7,7 @@ function posts(parentSelector) {
             this.date = date.split('-').reverse().join('.');
             this.status = status;
             this.title = title;
-            [this.textPreview, this.textUnderSpoiler] = markdownParser(text).split('#tl-cut#'); 
+            [this.text, this.cutText] = markdownParser(text).split('#cut'); 
             this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
@@ -43,10 +43,10 @@ function posts(parentSelector) {
                         <div class="p-3 sm:p-1 mx-auto rounded-md shadow-2 hover:shadow-3">
                             <div class="px-1.5 text-lg font-bold">${this.title}</div>
                             <div class="p-1.5 ">
-                                ${this.textPreview}
+                                ${this.text}
                             </div>
                             <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
-                                type="button" ${(this.textUnderSpoiler === undefined || this.textUnderSpoiler === '') ? `style="display:none"` : ''} 
+                                type="button" ${(this.cutText === undefined || this.cutText === '') ? `style="display:none"` : ''} 
                                     onclick="
                                         if(document.getElementById('${this.date}').style.display=='none') {
                                             document.getElementById('${this.date}').style.display='';
@@ -58,7 +58,7 @@ function posts(parentSelector) {
                                 ">Show more
                             </button>
                             <div class="p-1.5" id="${this.date}" style="display:none" >
-                                ${this.textUnderSpoiler}
+                                ${this.cutText}
                             </div>
                         </div>
                     </div>
