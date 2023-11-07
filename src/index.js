@@ -1,42 +1,5 @@
 const axios = require('axios');
-const hljs = require('highlight.js/lib/core');
-hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
-const md = require("markdown-it")({
-    html: true,
-    linkify: true,
-    typography: true,
-    breaks: true,
-    highlight: function (str, lang) {
-        if (lang && hljs.getLanguage(lang)) {
-            try {
-                return (
-                    '<pre class="hljs">' +
-                    hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
-                    "</pre>"
-                );
-            } catch (__) {}
-        }
-
-        return '<pre"hljs">' + md.utils.escapeHtml(str) + "</pre>";
-    },
-})
-    .use(require("markdown-it-imsize"))
-    .use(require("markdown-it-sub"))
-    .use(require("markdown-it-sup"))
-    .use(require("markdown-it-abbr"))
-    .use(function markdownItUnderline(md) {
-        function renderEm(tokens, idx, opts, _, slf) {
-            var token = tokens[idx];
-            if (token.markup === "_") {
-                token.tag = "u";
-            }
-            return slf.renderToken(tokens, idx, opts);
-        }
-
-        md.renderer.rules.em_open = renderEm;
-        md.renderer.rules.em_close = renderEm;
-    });
-
+const { markdownParser } = require('./markdownParser');
 function posts(parentSelector) { 
 
     class Post {
@@ -44,8 +7,7 @@ function posts(parentSelector) {
             this.date = date.split('-').reverse().join('.');
             this.status = status;
             this.title = title;
-            [this.textPreview, this.textUnderSpoiler] = md.render(text).
-                replaceAll('|{|', '<code>').replaceAll('|}|', '</code>').split('#spoiler#'); // this is a crutch;
+            [this.textPreview, this.textUnderSpoiler] = markdownParser(text).split('#tl-cut#'); 
             this.parent = document.querySelector(parentSelector);
 
             if (this.date === (new Intl.DateTimeFormat("uk-UA").format(new Date()))) {
@@ -83,9 +45,6 @@ function posts(parentSelector) {
                             <div class="p-1.5 ">
                                 ${this.textPreview}
                             </div>
-                            <div class="p-1.5" id="${this.date}" style="display:none" >
-                                ${this.textUnderSpoiler}
-                            </div>
                             <button class="p-1.5 text-[#007bff]" title="Click to show/hide content" 
                                 type="button" ${(this.textUnderSpoiler === undefined || this.textUnderSpoiler === '') ? `style="display:none"` : ''} 
                                     onclick="
@@ -98,6 +57,9 @@ function posts(parentSelector) {
                                     }
                                 ">Show more
                             </button>
+                            <div class="p-1.5" id="${this.date}" style="display:none" >
+                                ${this.textUnderSpoiler}
+                            </div>
                         </div>
                     </div>
                 </div>
